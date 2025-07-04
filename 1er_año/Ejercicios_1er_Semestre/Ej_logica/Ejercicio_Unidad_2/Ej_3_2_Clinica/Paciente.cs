@@ -16,7 +16,7 @@ namespace Ej_3_2_Clinica
             this.ObraSocial = string.Empty;
             this.HistoriaClinica = string.Empty;
         }
-        public Paciente(string nombre, int DNI, string telefono, bool sexo, string obraSocial, string historiaClinica) : base(nombre, DNI, telefono, sexo)
+        public Paciente(string nombre, string DNI, string telefono, bool sexo, string obraSocial, string historiaClinica) : base(nombre, DNI, telefono, sexo)
         {
             this.ObraSocial = obraSocial;
             this.HistoriaClinica = historiaClinica;
