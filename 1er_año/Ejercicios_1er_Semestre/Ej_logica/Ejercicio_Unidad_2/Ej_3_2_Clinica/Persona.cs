@@ -9,18 +9,18 @@ namespace Ej_3_2_Clinica
     internal class Persona
     {
         protected string Nombre;
-        protected int DNI;
+        protected string DNI;
         protected string Telefono;
         protected bool Sexo;
 
         public Persona()
         {
             this.Nombre = string.Empty;
-            this.DNI = 0;
+            this.DNI = string.Empty;
             this.Telefono = string.Empty;
             this.Sexo = false;
         }
-        public Persona(string nombre, int DNI, string telefono, bool sexo)
+        public Persona(string nombre,string DNI, string telefono, bool sexo)
         {
             this.Nombre = nombre;
             this.DNI = DNI;
@@ -32,7 +32,7 @@ namespace Ej_3_2_Clinica
             get { return Nombre; }
             set { Nombre = value; }
         }
-        public int dni
+        public string dni
         {
             get { return DNI; }
             set { DNI = value; }
@@ -49,7 +49,7 @@ namespace Ej_3_2_Clinica
         }
         public override string ToString()
         {
-            return $"{nombre}, {dni}, {telefono}, {sexo}";
+            return $"{nombre}, {dni}, {telefono}, {(sexo ? "Hombre" : "Mujer")}";
         }
     }
 }

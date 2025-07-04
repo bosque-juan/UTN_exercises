@@ -11,17 +11,17 @@ namespace Ej_3_2_Clinica
 
         // Atributes
         protected string Especialidad;
-        protected double CostoConsulta;
+        protected string CostoConsulta;
 
         // Constructor
         public Medico() : base()
         {
             this.Especialidad = string.Empty;
-            this.CostoConsulta = 0;
+            this.CostoConsulta = string.Empty;
         }
-        public Medico(string nombre, int DNI, string telefono, bool sexo, string obraSocial, double costoConsulta) : base(nombre, DNI, telefono, sexo)
+        public Medico(string nombre, string DNI, string telefono, bool sexo, string especialidad, string costoConsulta) : base(nombre, DNI, telefono, sexo)
         {
-            this.Especialidad = obraSocial;
+            this.Especialidad = especialidad;
             this.CostoConsulta = costoConsulta;
         }
 
@@ -32,7 +32,7 @@ namespace Ej_3_2_Clinica
             set { this.Especialidad = value; }
 
         }
-        public double costoConsulta
+        public string costoConsulta
         {
             get { return this.CostoConsulta; }
             set { this.CostoConsulta = value; }

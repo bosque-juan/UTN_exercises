@@ -35,8 +35,8 @@
             rdoBtn_F = new RadioButton();
             rdoBtn_M = new RadioButton();
             txt_h_clinica_honoriarios = new TextBox();
-            textBox4 = new TextBox();
-            textBox2 = new TextBox();
+            txt_dni = new TextBox();
+            txt_telefono = new TextBox();
             lbl_dni = new Label();
             lbl_Especialdiad = new Label();
             lbl_telefono = new Label();
@@ -55,8 +55,8 @@
             lbox_Info.ItemHeight = 15;
             lbox_Info.Location = new Point(512, 97);
             lbox_Info.Name = "lbox_Info";
-            lbox_Info.Size = new Size(184, 244);
-            lbox_Info.TabIndex = 10;
+            lbox_Info.Size = new Size(184, 259);
+            lbox_Info.TabIndex = 17;
             // 
             // panel1
             // 
@@ -66,8 +66,8 @@
             panel1.Controls.Add(rdoBtn_F);
             panel1.Controls.Add(rdoBtn_M);
             panel1.Controls.Add(txt_h_clinica_honoriarios);
-            panel1.Controls.Add(textBox4);
-            panel1.Controls.Add(textBox2);
+            panel1.Controls.Add(txt_dni);
+            panel1.Controls.Add(txt_telefono);
             panel1.Controls.Add(lbl_dni);
             panel1.Controls.Add(lbl_Especialdiad);
             panel1.Controls.Add(lbl_telefono);
@@ -85,7 +85,7 @@
             lbl_historia_clinica.Location = new Point(41, 224);
             lbl_historia_clinica.Name = "lbl_historia_clinica";
             lbl_historia_clinica.Size = new Size(58, 15);
-            lbl_historia_clinica.TabIndex = 19;
+            lbl_historia_clinica.TabIndex = 15;
             lbl_historia_clinica.Text = "H. Clinica";
             // 
             // combBox_Especialidad
@@ -95,7 +95,7 @@
             combBox_Especialidad.Location = new Point(119, 183);
             combBox_Especialidad.Name = "combBox_Especialidad";
             combBox_Especialidad.Size = new Size(102, 23);
-            combBox_Especialidad.TabIndex = 13;
+            combBox_Especialidad.TabIndex = 14;
             // 
             // rdoBtn_F
             // 
@@ -124,21 +124,22 @@
             txt_h_clinica_honoriarios.Location = new Point(119, 221);
             txt_h_clinica_honoriarios.Name = "txt_h_clinica_honoriarios";
             txt_h_clinica_honoriarios.Size = new Size(102, 23);
-            txt_h_clinica_honoriarios.TabIndex = 18;
+            txt_h_clinica_honoriarios.TabIndex = 16;
             // 
-            // textBox4
+            // txt_dni
             // 
-            textBox4.Location = new Point(121, 69);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(100, 23);
-            textBox4.TabIndex = 7;
+            txt_dni.Location = new Point(121, 69);
+            txt_dni.Name = "txt_dni";
+            txt_dni.Size = new Size(100, 23);
+            txt_dni.TabIndex = 7;
             // 
-            // textBox2
+            // txt_telefono
             // 
-            textBox2.Location = new Point(121, 109);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(100, 23);
-            textBox2.TabIndex = 9;
+            txt_telefono.AcceptsReturn = true;
+            txt_telefono.Location = new Point(121, 109);
+            txt_telefono.Name = "txt_telefono";
+            txt_telefono.Size = new Size(100, 23);
+            txt_telefono.TabIndex = 9;
             // 
             // lbl_dni
             // 
@@ -155,7 +156,7 @@
             lbl_Especialdiad.Location = new Point(41, 186);
             lbl_Especialdiad.Name = "lbl_Especialdiad";
             lbl_Especialdiad.Size = new Size(72, 15);
-            lbl_Especialdiad.TabIndex = 14;
+            lbl_Especialdiad.TabIndex = 13;
             lbl_Especialdiad.Text = "Especialidad";
             // 
             // lbl_telefono
@@ -209,16 +210,17 @@
             lbl_rol.Name = "lbl_rol";
             lbl_rol.Size = new Size(100, 15);
             lbl_rol.TabIndex = 1;
-            lbl_rol.Text = "Seleccione un rol:";;
+            lbl_rol.Text = "Seleccione un rol:";
             // 
             // btn_Guardar
             // 
             btn_Guardar.Location = new Point(101, 383);
             btn_Guardar.Name = "btn_Guardar";
             btn_Guardar.Size = new Size(180, 31);
-            btn_Guardar.TabIndex = 11;
+            btn_Guardar.TabIndex = 18;
             btn_Guardar.Text = "Guardar";
             btn_Guardar.UseVisualStyleBackColor = true;
+            btn_Guardar.Click += btn_Guardar_Click;
             // 
             // Hospital
             // 
@@ -241,9 +243,9 @@
         #endregion
         private ListBox lbox_Info;
         private Panel panel1;
-        private TextBox textBox4;
+        private TextBox txt_dni;
         private TextBox txt_h_clinica_honoriarios;
-        private TextBox textBox2;
+        private TextBox txt_telefono;
         private Label lbl_dni;
         private Label lbl_Especialdiad;
         private Label lbl_telefono;
